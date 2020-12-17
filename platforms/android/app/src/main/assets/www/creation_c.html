@@ -1,0 +1,81 @@
+<div data-role="page" id="accueil">
+      <div data-role="header" data-theme="f">
+        <center> <h1>PARKING CITY</h1></center>
+      </div>
+      <div data-role="content">
+         <p class="center">
+            <img src="img/mist.jpg" alt="logo: Journ&eacute;e d'int&eacute;gration" width="1650" height="220" />
+         </p>
+
+         <p>Bienvenu dans le parking city</p>
+         <nav>
+         <ul data-role="listview" data-inset="true">
+            <li>
+               <a href="creation_c.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Creation compte</a>
+            </li>
+            <li><a href="les Abonne.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Les Aboonement</a></li>
+            <li><a href="Reservation.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Reservation</a></li>
+            <li><a href="Factures.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Facture</a></li>
+            <li><a href="nos_parten.html" class="ui-btn-active ui-state-persist" data-icon = "grid"></a></li>
+             <li><a href="index.html"class="ui-btn-active ui-state-persist" data-icon = "avatar">Deconnexion </a></li>
+         </ul>
+         </nav>
+     </div>
+<h1>Creation Du Compte<span id="gnotif"></span></h1>
+      
+      <div data-role="fieldcontain" data-theme="a">
+        <form action="#" method="POST" id="form2" data-transition="flow" data-rel="dialog">
+            <div data-role="fieldcontain">
+               <input placeholder="Votre nom " type="text" name="nom" id="id_nom" data-mini="true" required="required"/>
+            </div>
+
+            <div data-role="fieldcontain">
+               <input placeholder="Votre prenom " type="text" name="prenom" id="id_prenom" data-mini="true" required="required"/>
+            </div>
+
+          
+            <div data-role="fieldcontain">
+               <input placeholder="Votre date_naissance du gerant" type="date" name="date_naissance" id="id_date_naissance" data-mini="true" required="required"/>
+            </div>
+
+            <div data-role="fieldcontain">
+               <input placeholder="Votre email du gerant" type="email" name="email" id="id_email" data-mini="true" required="required"/>
+            </div>
+   
+            <div data-role="fieldcontain">
+               <input placeholder="password" type="password" name="password" id="id_pass" data-mini="true"required="required" />
+            </div>
+
+            <div data-role="fieldcontain">
+               <input placeholder="confirmer" type="password" name="confirmer" id="id_confirmer" data-mini="true" required="required"/>
+            </div>
+   
+            <div data-role="fieldcontain">
+               <input placeholder="telephone" type="tel" name="telephone" id="id_telephone" data-mini="true" required="required"/>
+            </div>
+
+           
+            <div data-role="fieldcontain">
+               <input placeholder="Votre adresse du gerant" type="text" name="adresse" id="id_adresse" data-mini="true" required="required"/>
+            </div>
+   
+            <div data-role="fieldcontain">
+               <input placeholder="ville" type="text" name="ville" id="id_ville" data-mini="true" required="required"/>
+            </div>
+
+            
+            <div data-role="fieldcontain" id="div_but"> 
+               <a href="#page1" class="ui-btn ui-btn-inline">Se connecter</a>
+                  <button type="submit" name="service" class="ui-btn ui-btn-b ui-btn-inline" value="ins_gerant" onclick="ins_gerant()">Envoyer</button>   
+            </div>
+              </div>
+     <footer data-role="footer" role="contentinfo">
+         <center>
+         <p class="center">Powered by Miste_dame</p>
+         <h5>Copyright © 2020 Parking City. Tous Droits Réservés</h5>
+         <p>Connectez-vous avec nous: facebook-instgram-telegram</p></center>
+      </footer>
+   </div>
+</body>
+
+</html>
