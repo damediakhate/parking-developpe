@@ -1,0 +1,4 @@
+#Wed Dec 02 16:51:10 CET 2020
+base.0=C\:\\wamp64\\www\\Parking_Residence\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
