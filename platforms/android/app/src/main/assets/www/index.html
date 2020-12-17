@@ -10,7 +10,7 @@
    <script>
 
       $(document).ready(function () {
-         var BASE_URL = "http://192.168.43.222/backend/auth.php?service=";
+         var BASE_URL = "http://localhost/backendparc/auth.php?service=";
          register = function () {
             snom = $("#rnom").val();
             sprenom = $("#rprenom").val();
@@ -22,6 +22,7 @@
                method: "POST",
                data: { nom: snom, prenom: sprenom, login: slogin, pass: spass }
             }).done(function (msg) {
+            	alert(msg.code);
                if(msg.code==0){
                   document.location.href="#auth";
                } 
@@ -53,8 +54,73 @@
          }
 
 
+          //fonction pour s'insertion de gerant
+         ins_gerant = function () {
+            snom = $("#id_nom").val();
+            sprenom = $("#id_prenom").val();
+            srole = $("#id_role").val();
+            sdate_naissance = $("#id_date_naissance").val();
+            semail = $("#id_email").val();
+            spass = $("#id_pass").val();
+            sconfirmer = $("#id_confirmer").val();
+            stel = $("#id_telephone").val();
+            scarte = $("#id_cin").val();
+            sadresse = $("#id_adresse").val();
+            sville = $("#id_ville").val();
+            sgenre = $("#id_genre").val();
+            // il faut faire la valdiation des champs
+            $.ajax({
+               url: BASE_URL + "ins_gerant",
+               method: "POST",
+               data: { nom_gerant: snom, prenom_gerant: sprenom, role_gerant: srole, date_naissance: sdate_naissance, email: semail, password: spass, telephone: stel, cin: scarte, adresse: sadresse, ville: sville, sexe: sgenre }
+            }).done(function (msg) {
+               if(msg.code==0){
+                  document.location.href="#loger";
+               } 
+               else {
+                  $("#gnotif").html("Erreur !!!");
+               }
+            });
+            return false;
+         }
 
+         //fonction pour s'insertion de gerant
+         ins_abonne = function () {
+            snom = $("#id_nom_a").val();
+            sprenom = $("#id_prenom_a").val();
+            srole = $("#id_role_a").val();
+            sdate_naissance = $("#id_date_naissance_a").val();
+            semail = $("#id_email_a").val();
+            spass = $("#id_pass_a").val();
+            sconfirmer = $("#id_confirmer_a").val();
+            stel = $("#id_tel_a").val();
+            scarte = $("#id_carte_a").val();
+            sadresse = $("#id_adresse_a").val();
+            sville = $("#id_ville_a").val();
+            sgenre = $("#id_genre_a").val();
+            // il faut faire la valdiation des champs
+            $.ajax({
+               url: BASE_URL + "ins_abonne",
+               method: "POST",
+               data: { nom_abonne: snom, prenom_abonne: sprenom, role_abonne: srole, date_naissance: sdate_naissance, email: semail, password: spass, telephone: stel, cin: scarte, adresse: sadresse, ville: sville, sexe: sgenre }
+            }).done(function (msg) {
+               if(msg.code==0){
+                  document.location.href="#loger";
+               } 
+               else {
+                  $("#anotif").html("Erreur !!!");
+               }
+            });
+            return false;
+         }
       });
+   </script>
+   <script type="text/javascript" src="jquery-3.5.1.js"></script>
+   <script type="text/javascript" src="jquery.mobile-1.4.5.js"></script>
+
+
+
+      
    </script>
 </head>
 
@@ -74,7 +140,7 @@
 
       </div>
       <footer data-role="footer" role="contentinfo" data-theme="b">
-         <p class="center">Powered by ESSA</p>
+         <p class="center">Powered by Miste_dame</p>
       </footer>
 
    </div>
@@ -97,32 +163,39 @@
 
       </div>
       <footer data-role="footer" role="contentinfo">
-         <p class="center">Powered by ESSA</p>
+         <p class="center">Powered by Miste_dame</p>
       </footer>
 
    </div>
    <div data-role="page" id="accueil">
       <div data-role="header" data-theme="f">
-         <h1>Kiwi Partÿ, by Alsacréations</h1>
+        <center> <h1>PARKING CITY</h1></center>
       </div>
       <div data-role="content">
          <p class="center">
-            <img src="/img/essa.png" alt="ESSA: Journ&eacute;e d'int&eacute;gration" width="320" height="89" />
+            <img src="img/mist.jpg" alt="logo: Journ&eacute;e d'int&eacute;gration" width="1650" height="220" />
          </p>
 
-         <p>Programme des Journées</p>
+         <p>Bienvenu dans le parking city</p>
+         <nav>
          <ul data-role="listview" data-inset="true">
-            <li><a href="programme.html" data-transition="flip">Le programme</a></li>
-            <li><a href="orateurs.html" data-transition="slide">Les orateurs</a></li>
-            <li><a href="partenaires.html" data-transition="flow">Nos partenaires</a></li>
-            <li><a href="after.html" data-transition="slidedown">L':after</a></li>
-            <li><a href="contact.html" data-transition="slideup">Nous donner un feedback</a></li>
+            <li>
+               <a href="creation_c.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Creation compte</a>
+            </li>
+            <li><a href="les Abonne.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Les Aboonement</a></li>
+            <li><a href="Reservation.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Reservation</a></li>
+            <li><a href="Factures.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Facture</a></li>
+            <li><a href="nos_parten.html" class="ui-btn-active ui-state-persist" data-icon = "grid"></a></li>
+             <li><a href="index.html"class="ui-btn-active ui-state-persist" data-icon = "avatar">Deconnexion </a></li>
          </ul>
-
+         </nav>
 
       </div>
       <footer data-role="footer" role="contentinfo">
-         <p class="center">Powered by ESSA</p>
+         <center>
+         <p class="center">Powered by Miste_dame</p>
+         <h5>Copyright © 2020 Parking City. Tous Droits Réservés</h5>
+         <p>Connectez-vous avec nous: facebook-instgram-telegram</p></center>
       </footer>
    </div>
 </body>
