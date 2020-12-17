@@ -1,0 +1,77 @@
+         <div data-role="page" id="accueil">
+      <div data-role="header" data-theme="f">
+        <center> <h1>PARKING CITY</h1></center>
+      </div>
+      <div data-role="content">
+         <p class="center">
+            <img src="img/mist.jpg" alt="logo: Journ&eacute;e d'int&eacute;gration" width="1300" height="250" />
+         </p>
+         <nav>
+         <ul data-role="listview" data-inset="true">
+            <li>
+               <a href="admin.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Administrateur</a>
+            </li>
+            <li><a href="les_Abonne.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Les Aboonement</a></li>
+            <li><a href="Reservation.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Reservation</a></li>
+            <li><a href="contact.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Contacts</a></li>
+            <li><a href="nos_parten.html" class="ui-btn-active ui-state-persist" data-icon = "grid">Nos Partenaire</a></li>
+             <li><a href="index.html"class="ui-btn-active ui-state-persist" data-icon = "avatar">Deconnexion </a></li>
+         </ul>
+         </nav>
+     </div>
+         
+         <h1>Faire Une Reservation</h1>
+      
+
+      <div data-role="fieldcontain" data-theme="a">
+        <form action="#" method="POST" id="form4" data-transition="flow" data-rel="dialog">
+
+                <input placeholder="Nom_Prenom " type="text" name="nom_prenom" id="id_nom_prenom" data-mini="true" />
+            </div>
+             <div data-role="fieldcontain">
+               <input placeholder="Marque" type="text" name="marque" id="id_marque_v" data-mini="true" />
+            </div>
+
+            <div data-role="fieldcontain">
+               <input placeholder="Matricule" type="text" name="matricule" id="id_matricule_v" data-mini="true" />
+            </div>
+
+            <div data-role="fieldcontain">
+               <input placeholder=" date de reservation " type="date" name="date_reservation" id="id_date_reservation" data-mini="true" />
+                
+            </div>
+
+            
+            <div data-role="fieldcontain">
+               <input placeholder="Fin du reservation " type="date" name="fin_reservation" id="id_fin_reservation" data-mini="true" />
+            </div>
+   
+            <div data-role="fieldcontain" id="div_but"> 
+               
+                  <button type="submit" name="service" class="ui-btn ui-btn-b ui-btn-inline" value="Reservation">Envoyer</button>   
+            </div>
+               
+      <footer data-role="footer" role="contentinfo">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-4 col-lg-4 padding0 padding0"
+                     align="center">
+                    <form name="newsletter_email" method="post" action="/inscription-newsletter">
+                    <div class="newsletter">
+                        <label align="center">Inscrivez-vous a la newsletter</label>
+                        <div>
+                            <input type="email" id="newsletter_email_email" name="newsletter_email[email]" class="form-control" placeholder="votre email" />
+                            <button type="submit"
+                                    class="btn btn-primary">ok</button>
+                        </div>
+                    </div>
+                    <input type="hidden" id="newsletter_email__token" name="newsletter_email[_token]" value="TvAIxQx1jo8l0QZoMrfV07R6NZDfX7DqXIMoeax6OB4" /></form>
+                </div>
+    
+         <center>
+         <p class="center">Powered by Miste_dame</p>
+         <h5>Copyright © 2020 Parking City. Tous Droits Réservés</h5>
+         <p>Connectez-vous avec nous: facebook-instgram-telegram</p></center>
+      </footer>
+   </div>
+</body>
+
+</html>
